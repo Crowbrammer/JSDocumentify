@@ -1,7 +1,10 @@
-const expect = require('chai').expect
+const expect = require("chai").expect;
+const jsDocify = require("../index");
 
-describe('test', () => {
-  it('test', () => {
-    expect(true).to.be.false;
+describe("JS Docify", () => {
+  it("selects something from html text", () => {
+    expect(
+      jsDocify("<p>Hi</p><p>Wow</p>").querySelectorAll("p").length
+    ).to.equal(2);
   });
 });
